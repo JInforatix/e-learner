@@ -1,13 +1,13 @@
-package com.jinforatix.elerner;
+package com.jinforatix.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ELernerApplication {
+public class ELearnerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ELernerApplication.class, args);
+        SpringApplication.run(ELearnerApplication.class, args);
     }
 
 }
