@@ -1,17 +1,17 @@
-package com.jinforatix.app.service;
+package com.jinforatix.app.coursemanager.service;
 
 import java.util.List;
-import java.util.stream.Collectors;
+import static java.util.stream.Collectors.toList;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jinforatix.app.domain.dto.AuthorDTO;
-import com.jinforatix.app.domain.dto.CourseDTO;
-import com.jinforatix.app.domain.model.Author;
-import com.jinforatix.app.domain.model.Course;
-import com.jinforatix.app.repository.AuthorRepository;
-import com.jinforatix.app.repository.CourseRepository;
+import com.jinforatix.app.coursemanager.domain.dto.AuthorDTO;
+import com.jinforatix.app.coursemanager.domain.dto.CourseDTO;
+import com.jinforatix.app.coursemanager.domain.model.Author;
+import com.jinforatix.app.coursemanager.domain.model.Course;
+import com.jinforatix.app.coursemanager.repository.AuthorRepository;
+import com.jinforatix.app.coursemanager.repository.CourseRepository;
 
 @Service
 @Transactional
@@ -29,12 +29,12 @@ public class CourseService {
         var authors = authorRepository.findAll();
         return authors.stream()
             .map(this::convertToDto)
-            .collect(Collectors.toList());
+            .collect(toList());
     }
 
     public List<CourseDTO> getAllCourses() {
         var courses = courseRepository.findAll();
-        return courses.stream().map(this::convertToDto).collect(Collectors.toList());
+        return courses.stream().map(this::convertToDto).collect(toList());
     }
 
     private AuthorDTO convertToDto(Author author) {

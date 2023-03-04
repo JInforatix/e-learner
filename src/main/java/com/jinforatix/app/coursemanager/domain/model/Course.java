@@ -1,4 +1,4 @@
-package com.jinforatix.app.domain.model;
+package com.jinforatix.app.coursemanager.domain.model;
 
 import java.math.BigDecimal;
 import java.time.Instant;

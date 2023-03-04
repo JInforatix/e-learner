@@ -1,4 +1,4 @@
-package com.jinforatix.app.controller;
+package com.jinforatix.app.coursemanager.controller;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jinforatix.app.domain.dto.AuthorDTO;
-import com.jinforatix.app.domain.dto.CourseDTO;
-import com.jinforatix.app.service.CourseService;
+import com.jinforatix.app.coursemanager.domain.dto.AuthorDTO;
+import com.jinforatix.app.coursemanager.domain.dto.CourseDTO;
+import com.jinforatix.app.coursemanager.service.CourseService;
 
 
 @RestController

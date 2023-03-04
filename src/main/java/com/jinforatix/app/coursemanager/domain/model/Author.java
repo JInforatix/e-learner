@@ -1,4 +1,4 @@
-package com.jinforatix.app.domain.model;
+package com.jinforatix.app.coursemanager.domain.model;
 
 import java.util.ArrayList;
 import java.util.List;
