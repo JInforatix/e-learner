@@ -43,16 +43,18 @@ public class CourseService {
 
 
     private CourseDTO convertToDto(Course course) {
-        return new CourseDTO(course.getId(), course.getTitle(),
+        return new CourseDTO(course.getId(), course.getTitle(), course.getTopic(),
                 course.getDescription(), course.getPrice(),
          course.getCreationDate(), course.getLastModified());
     }
 
     protected Course convertToEntity(CourseDTO courseDto) {
         Course course = new Course();
-        course.setTitle(courseDto.getTitle());
-        course.setPrice(courseDto.getPrice());
-        // map remaining data
+        course.setTitle(courseDto.title());
+        course.setTopic(courseDto.topic());
+        course.setPrice(courseDto.price());
+        course.setDescription(courseDto.description());
+        
         return course;
     }
 

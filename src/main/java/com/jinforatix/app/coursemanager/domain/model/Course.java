@@ -29,6 +29,8 @@ public class Course {
 
     private String title;
 
+    private String topic;
+
     private String description;
 
     private BigDecimal price;
@@ -43,9 +45,10 @@ public class Course {
 
     public Course() {}
 
-    public Course(Author author, String title, String description, BigDecimal price) {
+    public Course(Author author, String title, String description, String topic, BigDecimal price) {
         this.author = author;
         this.title = title;
+        this.topic = topic;
         this.description = description;
         this.price = price;
     }
@@ -68,6 +71,14 @@ public class Course {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
     }
 
     public String getDescription() {
