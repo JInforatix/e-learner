@@ -17,14 +17,14 @@ public class Author {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
-    protected String firstName;
+    private String firstName;
 
-    protected String lastName;
+    private String lastName;
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
-    protected List<Course> courses = new ArrayList<>();
+    private List<Course> courses = new ArrayList<>();
 
     public Author() {}
 

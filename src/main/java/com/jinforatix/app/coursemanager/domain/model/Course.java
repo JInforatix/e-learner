@@ -16,21 +16,21 @@ public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    protected Long id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
     private Author author;
 
-    protected String title;
+    private String title;
 
-    protected String description;
+    private String description;
 
-    protected BigDecimal price;
+    private BigDecimal price;
 
-    protected Instant creationDate;
+    private Instant creationDate;
 
-    protected Instant lastModified;
+    private Instant lastModified;
 
     public Course() {}
 
